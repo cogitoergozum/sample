@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+<ul>
+{% for person in persons %}
+    <li><a href="{% url 'pim-edit' person.id %}">{{person.fullname}}</a></li>
+{% endfor %}
+</ul>
+
+{% endblock %}
