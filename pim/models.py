@@ -21,7 +21,7 @@ class Student(models.Model):
     def fullname(self):
         mi = " %c." % self.middle_name[0] if self.middle_name else ''
 
-        return "%s. %s%s%s" % (self.last_name,self.given_name,mi)
+        return "%s, %s%s" % (self.last_name,self.given_name,mi)
 
     def __unicode__(self):
         return self.fullname
