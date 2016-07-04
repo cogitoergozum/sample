@@ -10,7 +10,9 @@ def nameField(**kargs):
     return models.CharField(**kargs)
 
 
-class Person(models.Model):
+
+class Student(models.Model):
+    id_number = models.CharField(max_length=20, unique=True)
     given_name = nameField()
     last_name=nameField()
     middle_name=nameField(blank=True)
@@ -18,9 +20,11 @@ class Person(models.Model):
     @property
     def fullname(self):
         mi = " %c." % self.middle_name[0] if self.middle_name else ''
-        return "%s. %s%s" % (self.last_name,self.given_name,mi)
+
+        return "%s. %s%s%s" % (self.last_name,self.given_name,mi)
 
     def __unicode__(self):
         return self.fullname
+
 
 

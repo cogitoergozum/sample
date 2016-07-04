@@ -7,3 +7,8 @@ urlpatterns = [
     url(r'^list/$',listpersons,name='pim-list')
 
 ]
+
+
+
+
+

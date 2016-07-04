@@ -1,8 +1,11 @@
 from django.forms import ModelForm
 
-from models import Person
+from models import Student
 
-class PersonForm(ModelForm):
+class StudentForm(ModelForm):
     class Meta:
-        model = Person
-        fields = ['given_name','middle_name','last_name']
+        model = Student
+        fields = ['id_number','given_name','middle_name','last_name']
+
+
+
